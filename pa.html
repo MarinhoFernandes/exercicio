@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo</h1>
+    <input type="number" id="num1" >
+    <input type="number" id="num2" >
+</br></br>
+    <button onclick="calculo()" id='soma'>Somar</button>
+    <button onclick="calculo()" id='subtrair'>Subtração</button>
+    <button onclick="calculo()" id='multiplicar'>Multiplicação</button>
+    <button onclick="calculo()" id='dividir'>Divisão</button>
+</br></br>
+    <p id='resultado'></p>
+    <script>
+        function calculo() {
+        let x = +document.getElementById('num1').value;
+        let y = +document.getElementById('num2').value;
+
+        document.getElementById('soma').onclick = function() {
+            document.getElementById('resultado').innerHTML = "Resultado: " + (x + y);
+        }
+        document.getElementById('subtrair').onclick = function() {
+            document.getElementById('resultado').innerHTML = "Resultado: " + (x - y);
+        }
+        document.getElementById('multiplicar').onclick = function() {
+            document.getElementById('resultado').innerHTML = "Resultado: " + (x * y);
+        }
+        document.getElementById('dividir').onclick = function() {
+            document.getElementById('resultado').innerHTML = "Resultado: " + (x / y);
+        }
+        }
+    </script>    
+</body>
+</html>
